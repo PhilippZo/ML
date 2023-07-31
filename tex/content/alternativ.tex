@@ -1,0 +1,14 @@
+%\section{Alternativ approach}
+%As an alternative approach the routine of finding the least square for a given function will be choosen.
+%With the approximatly exponential behviour of most pandemics, when it comes to confirmed cases, 
+%the fit will be applied to the form: $a \cdot exp(b \cdot t)+c$ where $t$ is the time in days and $a,b,c$ trainable parameters.
+%Since the alternative method will not rely on a train data set, but on the 40 days ahead of the 11 that are about to be predicted,
+%only the test data will be of use here. For that every cities 40 first days will be fitted with an exponential function against the confirmed cases, followed by
+%calculation of the mean squared error, of the then predicited following 11 days,  to be later compared against the nerual net. 
+%In this context the alternative approach will rely on the size of the onterval of last days to be predicted. Increasing or decreasing the last 11 days as a target 
+%will thus make the resulting error smaller, not only because of less points to predict but the more data that trains the fit. 
+
+\section{Alternative Approach}
+As an alternative approach, the method of finding the least square for a given function will be chosen. With the approximately exponential behavior of most pandemics when it comes to confirmed cases, the fit will be applied to the form: $a \cdot \exp(b \cdot t) + c$, where $t$ is the time in days, and $a$, $b$, and $c$ are trainable parameters.
+Since the alternative method will not rely on a training dataset but on the 40 days ahead of the 11 that are about to be predicted, only the test data will be used here. For that, the first 40 days of every city will be fitted with an exponential function against the confirmed cases, followed by the calculation of the mean squared error of the then predicted following 11 days, to be later compared against the neural net.
+In this context, the alternative approach will rely on the size of the interval of the last days to be predicted. Increasing or decreasing the last 11 days as a target will thus make the resulting error smaller, not only because of fewer points to predict but also due to more data that trains the fit.
